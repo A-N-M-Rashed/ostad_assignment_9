@@ -12,3 +12,8 @@ for(skill of skills){
 }
 //End of Question 1
 
+//2. Change:
+document.querySelector('#textUpdate').textContent= "Hi! The text is changed.";
+document.querySelector('#tagUpdate').innerHTML= "Something <em>emphasized</em>";
+document.body.style.backgroundColor= 'burlywood';
+//End of Question 2
