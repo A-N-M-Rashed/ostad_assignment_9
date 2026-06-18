@@ -17,3 +17,8 @@ document.querySelector('#textUpdate').textContent= "Hi! The text is changed.";
 document.querySelector('#tagUpdate').innerHTML= "Something <em>emphasized</em>";
 document.body.style.backgroundColor= 'burlywood';
 //End of Question 2
+
+//3. Create and append new elements dynamically.
+let p= document.createElement("p");
+document.querySelector(".container").append("Appended paragraph", p);
+//End of Question 3
