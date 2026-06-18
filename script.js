@@ -22,3 +22,8 @@ document.body.style.backgroundColor= 'burlywood';
 let p= document.createElement("p");
 document.querySelector(".container").append("Appended paragraph", p);
 //End of Question 3
+
+// Remove an element from the DOM.
+const element= document.getElementById("remove_p");
+element.remove();
+//End of Question 4
