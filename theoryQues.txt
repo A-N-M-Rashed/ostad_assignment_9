@@ -1,0 +1,49 @@
+PART A: THEORY QUESTIONS
+
+Answer to the Question 1: Execution Context
+---Execution Context: Before running code, JavaScript creates an environment, which is called Execution Context.
+---Global Execution Context: When a variable is created globally or out the scope of a function then it's called Global Exectuion Context. 
+---Function Execution Context: When a function runs then it's called Function Exectuion Context. 
+---In the Cration Phase, JavaScript setup environment by setting up memory space as per need. 
+Along with it creates a global object, bind 'this' keyword to that global object. 
+Lastly JavaScript creates memory space for variable declarations and functions declarations which is called Hoisting.   
+
+    In Exectuion Phase, JavaScript go from top to bottom, assigns value for variable and executes functions. 
+
+Answer to the Question 2: Event Loop
+---Event Loop: It always look at the call stack and call back queue. If the call stack is empty and then it pushes the asynchronous function from the queue to call stack to be run. 
+--- JavaScript is Single Threaded means 'one task at a time'. Because, it has a single Call Stack where it executes code line by line.
+--- JavaScript uses a stack to execute function in lifo (last in first out order) 
+and this is 'call stack'. 
+
+    While executing code whenever an asynchronous functions (eg. setTimeout(), setInterval(), etc. ) are
+encountered JavaScript send them to the 'Web Api' to be handled.
+
+    When web api finished it's job then the asynchronous functions is sent to 'call back queue'.
+     
+    In the meantime, if all the synchronous function is executed in call stack and the stack become empty; The event loop push the asynchronous functions one by one form the call back queue. 
+
+
+Answer to the Question 3:  setTimeout() and setInterval()
+---setTimeout is a JavaScript built in function which executes specific code after a specific delay. 
+---setInterval is also a JavaScript built in function which executes specific code repeatedly at a fixed interval. 
+---Difference between setTimeout and setInterval is setTimeout() runs just once and the other one runs repeatedly at a fixed interval.
+
+---setTimeout(()=>{
+    console.log("Hello World")
+},3000)
+
+
+Answer to the Question 4:  Callback Functions
+---A function which is passed as an argument in another function is called 'Callback function'.
+---Call back needed not to be freezed or stop operation after encountered an asynchronous function. 
+
+---function mango(){
+    console.log("mango");
+}
+
+function fruits(fruit){
+    mango();
+}
+
+fruits(mango);
